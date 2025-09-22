@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <c:set var="pageTitle" value="${post.title}"/>
-
 <head>
     <title>VOGG</title>
 

@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<meta> charset="UTF-8">
 
 <header style="background:#fff; border-bottom:2px solid #f97316; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; font-family:'Segoe UI', Arial, sans-serif;">
 
