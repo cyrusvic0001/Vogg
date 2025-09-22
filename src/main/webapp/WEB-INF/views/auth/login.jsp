@@ -17,6 +17,30 @@
       color: #111827;
     }
 
+    /* Header */
+    .top-bar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 15px 25px;
+    }
+    .home-btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border: 2px solid #ff6b00;
+      border-radius: 9999px;
+      background: #fff;
+      color: #ff6b00;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .home-btn:hover {
+      background: #ff6b00;
+      color: #fff;
+    }
+
     .login-container {
       background: #fff;
       padding: 2.5rem;
@@ -33,7 +57,7 @@
       margin-bottom: 1rem;
       font-size: 1.8rem;
       font-weight: 700;
-      color: #ff6b00; /* orange heading */
+      color: #ff6b00;
     }
     .login-container p {
       font-size: 0.95rem;
@@ -110,6 +134,13 @@
   </style>
 </head>
 <body>
+
+  <!-- Top Home Button -->
+  <div class="top-bar">
+    <a href="<%= request.getContextPath() %>" class="home-btn">Home</a>
+  </div>
+
+  <!-- Login Card -->
   <div class="login-container">
     <h2>Welcome Back</h2>
     <p>Login to continue your journey on Vogg</p>

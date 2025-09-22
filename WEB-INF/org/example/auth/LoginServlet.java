@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("user", user);
                 session.setAttribute("username", user.getUsername());
 
-                resp.sendRedirect(req.getContextPath() + "/dashboard");
+                resp.sendRedirect(req.getContextPath() + "/posts");
                 return;
 
             }

@@ -6,26 +6,60 @@
 <head>
   <meta charset="UTF-8">
   <title>Vogg - Home</title>
+</head>
 <body>
-    <c:import url="/WEB-INF/views/includes/header.jsp"/>
+
+   <!-- Top Accent Line -->
+   <div style="height:6px; background:#ff5722; width:100%;"></div>
+
+   <!-- Logo Header -->
+   <header style="display:flex; justify-content:center; align-items:center; padding:20px; background:#fff; border-bottom:1px solid #eee;">
+       <a href=""
+          style="text-decoration:none; display:flex; align-items:center; font-family:'Segoe UI', Arial, sans-serif;">
+
+           <!-- Full Logo -->
+           <div style="display:flex; align-items:center; font-size:1.8rem; font-weight:800;
+                       background:linear-gradient(45deg,#ff6b00,#ff4500);
+                       -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+                       letter-spacing:1px; text-transform:uppercase;
+                       text-shadow:0 2px 4px rgba(0,0,0,0.15);">
+               VOGG
+           </div>
+       </a>
+   </header>
+
 
     <!-- Hero Banner -->
-    <section style="text-align:center; padding:80px 20px; background:#f7f7f7;">
-        <h1 style="font-size:3em; font-weight:bold; margin-bottom:15px;">Welcome to <span style="color:#ff5722;">Vogg</span></h1>
-        <p style="font-size:1.3em; color:#555; max-width:600px; margin:0 auto;">
-            A modern blogging platform built for sharing stories, ideas, and knowledge with the world
+    <section style="text-align:center; padding:120px 20px;
+                    background:linear-gradient(135deg, #fff7f0 0%, #ffffff 100%);
+                    background-image: radial-gradient(circle at top left, rgba(255,87,34,0.1), transparent 60%),
+                                      radial-gradient(circle at bottom right, rgba(255,87,34,0.1), transparent 60%);
+                    position:relative; overflow:hidden;">
+
+        <!-- Decorative Circle -->
+        <div style="position:absolute; top:-60px; right:-80px; width:200px; height:200px; background:rgba(255,87,34,0.08); border-radius:50%;"></div>
+        <div style="position:absolute; bottom:-60px; left:-80px; width:180px; height:180px; background:rgba(255,87,34,0.08); border-radius:50%;"></div>
+
+        <!-- Main Hero Content -->
+        <h1 style="font-size:3.2em; font-weight:800; margin-bottom:15px; color:#111827; line-height:1.2;">
+            Write. Share. <span style="color:#ff5722;">Inspire.</span>
+        </h1>
+        <p style="font-size:1.25em; color:#444; max-width:680px; margin:0 auto 30px; line-height:1.6;">
+            Welcome to <b style="color:#ff5722;">Vogg</b> a modern space to share stories, spark conversations, and connect with thinkers around the world.
         </p>
+
         <div style="margin-top:30px;">
             <a href="${pageContext.request.contextPath}/signup"
-               style="padding:14px 30px; background:#ff5722; color:#fff; text-decoration:none; border-radius:30px; font-size:1.1em; margin:0 10px;">
+               style="padding:14px 34px; background:#ff5722; color:#fff; text-decoration:none; border-radius:30px; font-size:1.1em; font-weight:600; margin:0 12px; box-shadow:0 4px 12px rgba(255,87,34,0.3); transition:all 0.3s;">
                Get Started
             </a>
             <a href="${pageContext.request.contextPath}/login"
-               style="padding:14px 30px; background:#fff; color:#ff5722; border:2px solid #ff5722; text-decoration:none; border-radius:30px; font-size:1.1em; margin:0 10px;">
+               style="padding:14px 34px; background:#fff; color:#ff5722; border:2px solid #ff5722; text-decoration:none; border-radius:30px; font-size:1.1em; font-weight:600; margin:0 12px; transition:all 0.3s;">
                Login
             </a>
         </div>
     </section>
+
 
     <!-- About Section -->
     <section style="padding:60px 20px; text-align:center; background:#fff;">
@@ -67,7 +101,7 @@
             <div style="padding:20px; background:#fafafa; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
                 <h3>How to Create a Blog in Java</h3>
                 <p style="color:#999; font-size:0.9em;">Posted by Admin on Aug 8, 2025</p>
-                <p style="color:#555;">A beginner’s guide to building your own blog using Java and JSP.</p>
+                <p style="color:#555;">A foundational guide to building your own blog using Java and JSP.</p>
                 <a href="#" style="color:#ff5722; text-decoration:none; font-weight:bold;">Read More </a>
             </div>
             <div style="padding:20px; background:#fafafa; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">

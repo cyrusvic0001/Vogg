@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="WEB">
+    <output-path>$PROJECT_DIR$/WEB-INF</output-path>
+    <root id="root">
+      <element id="directory" name="views">
+        <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/target" />
+      <element id="module-output" name="vogg" />
+      <element id="module-source" name="vogg" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
+    </root>
+  </artifact>
+</component>

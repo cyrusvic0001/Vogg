@@ -52,7 +52,7 @@
                                 </a>
                             </h3>
                             <p style="color:#777; font-size:0.9em;">
-                                By ${post.author} •
+                                By ${post.author}
                                 <fmt:formatDate value="${post.createdAt}" pattern="dd MMM yyyy HH:mm"/>
                             </p>
                             <p>
