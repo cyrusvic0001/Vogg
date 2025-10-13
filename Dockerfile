@@ -1,5 +1,5 @@
 # Step 1: Use Maven to build the WAR
-FROM maven:3.9.6-eclipse-temurin-17 AS builder
+FROM maven:3.9.6-eclipse-temurin-24 AS builder
 WORKDIR /app
 
 # Copy your pom.xml and source code
@@ -10,7 +10,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Step 2: Use Tomcat to run it
-FROM tomcat:11-jdk17
+FROM tomcat:11-jdk24
 
 # Remove default ROOT web app
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
