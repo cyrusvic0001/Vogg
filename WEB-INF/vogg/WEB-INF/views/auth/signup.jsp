@@ -7,10 +7,14 @@
   <title>Vogg - Signup</title>
   <c:set var="pageTitle" value="Signup"/>
   <c:import url="/WEB-INF/views/includes/head.jsp" />
+</head>
 
-  <body>
-    <c:import url="/WEB-INF/views/includes/header.jsp" />
+<body>
+  <!-- Header Section -->
+  <c:import url="/WEB-INF/views/includes/header.jsp" />
 
+  <!-- Main Page Content -->
+  <main class="main-content">
     <div class="form-container">
       <h2>Create Account</h2>
       <p class="subtitle">Join <b>Vogg</b> and start sharing your stories</p>
@@ -48,92 +52,122 @@
         <a href="${pageContext.request.contextPath}/login">Login</a>
       </p>
     </div>
+  </main>
 
-    <c:import url="/WEB-INF/views/includes/footer.jsp" />
+  <!-- Footer Section -->
+  <c:import url="/WEB-INF/views/includes/footer.jsp" />
 
-    <style>
-      body {
-        font-family: 'Segoe UI', Arial, sans-serif;
-        background: linear-gradient(135deg, #fff7ed, #fffbeb); /* light orange-white gradient */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 90vh;
-        color: #111827;
-      }
-      .form-container {
-        background: #fff;
-        padding: 2rem;
-        border-radius: 16px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-        width: 100%;
-        max-width: 420px;
-        text-align: center;
-      }
-      h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
-        color: #f97316;
-      }
-      .subtitle {
-        font-size: 0.95rem;
-        color: #6b7280;
-        margin-bottom: 1.5rem;
-      }
-      .form-group {
-        margin-bottom: 1rem;
-        text-align: left;
-      }
-      .form-group label {
-        display: block;
-        margin-bottom: 0.4rem;
-        font-weight: 600;
-        font-size: 0.95rem;
-        color: #374151;
-      }
-      .form-group input {
-        width: 100%;
-        padding: 0.9rem;
-        border-radius: 10px;
-        border: 1px solid #d1d5db;
-        outline: none;
-        font-size: 1rem;
-        transition: border-color 0.3s;
-      }
-      .form-group input:focus {
-        border-color: #f97316; /* orange */
-        box-shadow: 0 0 0 3px rgba(249,115,22,0.2);
-      }
-      .btn {
-        margin-top: 0.5rem;
-        display: inline-block;
-        width: 100%;
-        padding: 0.9rem;
-        border-radius: 9999px;
-        border: none;
-        background: #f97316;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
-      .btn:hover {
-        background: #ea580c;
-      }
-      .alt-link {
-        margin-top: 1.5rem;
-        font-size: 0.9rem;
-        color: #6b7280;
-      }
-      .alt-link a {
-        color: #f97316;
-        text-decoration: none;
-        font-weight: 600;
-      }
-      .alt-link a:hover {
-        text-decoration: underline;
-      }
-    </style>
-  </body>
+  <!-- Inline Styles -->
+  <style>
+    /* === Base Page Layout === */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #fff7ed, #fffbeb); /* soft orange-white gradient */
+      display: flex;
+      flex-direction: column; /* stack header, main, footer vertically */
+      min-height: 100vh;
+      color: #111827;
+      margin: 0;
+    }
+
+    header, footer {
+      width: 100%;
+    }
+
+    /* === Main Content (Centers Form) === */
+    .main-content {
+      flex: 1; /* fills space between header & footer */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+    }
+
+    /* === Signup Form Styling === */
+    .form-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #f97316;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.9rem;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      outline: none;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: #f97316;
+      box-shadow: 0 0 0 3px rgba(249,115,22,0.2);
+    }
+
+    .btn {
+      margin-top: 0.5rem;
+      display: inline-block;
+      width: 100%;
+      padding: 0.9rem;
+      border-radius: 9999px;
+      border: none;
+      background: #f97316;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ea580c;
+    }
+
+    .alt-link {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .alt-link a {
+      color: #f97316;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .alt-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</body>
 </html>
