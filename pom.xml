@@ -8,6 +8,7 @@
     <artifactId>vogg</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- Must be WAR for deployment -->
     <packaging>war</packaging>
 
     <properties>
@@ -15,6 +16,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <repositories>
         <repository>
             <id>eclipse-ee4j</id>
@@ -30,6 +32,7 @@
             <version>6.1.0</version>
             <scope>provided</scope>
         </dependency>
+
         <!-- JSTL API -->
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
@@ -44,40 +47,25 @@
             <version>3.0.1</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>jakarta.servlet.jsp.jstl</groupId>-->
-<!--            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>-->
-<!--            <version>3.0.2</version>-->
-<!--        </dependency>-->
-
-        <!--
-        <dependency>
-            <groupId>org.glassfish.web</groupId>
-            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-
-            <version>3.0.1</version>
-        </dependency>
-        -->
-
-        <!-- MySQL JDBC Connector -->
-
+        <!-- BCrypt for password hashing -->
         <dependency>
             <groupId>org.mindrot</groupId>
             <artifactId>jbcrypt</artifactId>
             <version>0.4</version>
         </dependency>
 
-    <dependency>
+        <!--  MySQL JDBC Driver -->
+        <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>9.3.0</version>
-            <scope>compile</scope>
-    </dependency>
+        </dependency>
     </dependencies>
 
     <build>
         <finalName>vogg</finalName>
         <plugins>
+            <!-- Ensures all dependencies go inside WEB-INF/lib -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
