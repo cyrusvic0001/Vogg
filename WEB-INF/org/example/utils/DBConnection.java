@@ -7,19 +7,24 @@ import java.sql.SQLException;
 public class DBConnection {
 
     public static Connection getConnection() throws SQLException {
+        // Get database connection details from environment variables
         String url = System.getenv("DB_URL");
         String user = System.getenv("DB_USER");
         String pass = System.getenv("DB_PASS");
 
-        // --- Local fallback for development ---
-        if (url == null || url.isBlank())
+        // --- Local fallback for development (optional) ---
+        if (url == null || url.isBlank()) {
+            // Use your local MySQL for testing only
             url = "jdbc:mysql://localhost:3307/test?useSSL=false&serverTimezone=UTC";
-        if (user == null || user.isBlank())
+        }
+        if (user == null || user.isBlank()) {
             user = "root";
-        if (pass == null)
+        }
+        if (pass == null) {
             pass = "";
+        }
 
-        // --- Debug info ---
+        // --- Debug info (safe to leave, hides password) ---
         System.out.println("\n---- DATABASE CONNECTION DEBUG ----");
         System.out.println("URL: " + url);
         System.out.println("USER: " + user);
@@ -27,9 +32,10 @@ public class DBConnection {
         System.out.println("------------------------------------");
 
         try {
-            // Always ensure driver is loaded
+            // Ensure the MySQL driver is loaded
             Class.forName("com.mysql.cj.jdbc.Driver");
 
+            // Establish the connection
             Connection conn = DriverManager.getConnection(url, user, pass);
             System.out.println(" Connected successfully to database!");
             return conn;
@@ -40,7 +46,7 @@ public class DBConnection {
 
         } catch (SQLException e) {
             System.err.println(" Database connection failed: " + e.getMessage());
-            System.err.println("  Check your DB_URL, DB_USER, DB_PASS, and network access.");
+            System.err.println("   Check your DB_URL, DB_USER, DB_PASS, and network access.");
             throw e;
         }
     }
