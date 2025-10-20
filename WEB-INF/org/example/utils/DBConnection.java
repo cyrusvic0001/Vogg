@@ -13,7 +13,8 @@ public class DBConnection {
 
         // --- Local fallback for development ---
         if (url == null || url.isBlank())
-            url = "jdbc:mysql://localhost:3307/test?useSSL=false&serverTimezone=UTC";
+//            url = "jdbc:mysql://localhost:3307/test?useSSL=false&serverTimezone=UTC";
+            url = "mysql://avnadmin:AVNS_epTYS-_8UAfg581A21Y@mysql-38ab2d1b-victoryomoregie2-e940.b.aivencloud.com:24641/defaultdb?ssl-mode=REQUIRED";
         if (user == null || user.isBlank())
             user = "root";
         if (pass == null)
